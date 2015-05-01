@@ -68,17 +68,92 @@ function isPlainObj(obj) {
 }
 
 
-//测试用例
-var a = {
-	test: [{test:'aaa'}, 'aaa', function a(){}, null, 3]
-}
+//---------------------------用例1---------------------------///
+//var a = {
+//	test: [{test:'aaa'}, 'aaa', function a(){}, null, 3]
+//}
+//
+//var b = clone(a);
+//
+//a.test[1] = 'bbb';
+//a.test[0].test = 'bbb';
+//
+//console.log(a);
+//console.log(b);
 
-var b = clone(a);
-
-a.test[1] = 'bbb';
-a.test[0].test = 'bbb';
-
-console.log(a);
-console.log(b);
+//---------------------------output---------------------------///
 //{ test: [ { test: 'bbb' }, 'bbb', [Function: a], null, 3 ] }
 //{ test: [ { test: 'aaa' }, 'aaa', [Function: a], null, 3 ] }
+
+
+
+
+//---------------------------用例2---------------------------///
+//var a = 1;
+//var b = clone(a);
+//b = 2;
+//console.log(a, b); // 1, 2
+
+
+//---------------------------用例3---------------------------///
+//var a = [1, 2];
+//var b = clone(a);
+//a[0] = 'changed a';
+//b[1] = 'changed b';
+//console.log(a, b); // a:['changed a', 2], b:[1, changed b]
+
+
+//---------------------------用例4---------------------------///
+//var a = {
+//key1: 'value1',
+//key2: [{
+//id: 1,
+//data: [10, 20]
+//}, {
+//id: 2,
+//data: [20, 30]
+//}]
+//}
+//
+//var b = clone(a);
+//b.key1 = 'value changed';
+//b.key2[1].data[0] = 'changed data';
+//console.log(JSON.stringify(a,0,2), JSON.stringify(b,0,2));
+//---------------------------output---------------------------///
+//{
+//  "key1": "value1",
+//  "key2": [
+//    {
+//      "id": 1,
+//      "data": [
+//        10,
+//        20
+//      ]
+//    },
+//    {
+//      "id": 2,
+//      "data": [
+//        20,
+//        30
+//      ]
+//    }
+//  ]
+//} {
+//  "key1": "value changed",
+//  "key2": [
+//    {
+//      "id": 1,
+//      "data": [
+//        10,
+//        20
+//      ]
+//    },
+//    {
+//      "id": 2,
+//      "data": [
+//        "changed data",
+//        30
+//      ]
+//    }
+//  ]
+//}
