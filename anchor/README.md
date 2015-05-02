@@ -13,5 +13,6 @@
 URL为http://localhost/index.html#test时，执行test()   
 URL为http://localhost/index.html#test/a时，执行test(a)   
 URL为http://localhost/index.html#test/a/b时，执行test(a, b)   
-注意异常处理   
+注意异常处理 
+  
  
