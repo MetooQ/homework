@@ -1,0 +1,33 @@
+.btn {
+  
+  width: 70px;
+  height: 26px;
+  text-align: center;
+  padding-top: 6px;
+  cursor: pointer;
+  border: 1px rgb(200, 200, 200) solid;
+  border-radius: 5px;
+}
+.btn:hover {
+  background-color: rgb(226, 226, 226);
+}
+
+.list {
+  list-style: none;
+  padding: 2px 0;
+  cursor: pointer;
+}
+.list:hover {
+  background-color: rgb(226, 226, 226);
+}
+
+.drop-down {
+  display: none;
+  width: 68px;
+  border: 1px rgb(200, 200, 200) solid;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  box-shadow: 1px 1px 6px rgb(190, 190, 190);
+  border-radius: 5px;
+}
